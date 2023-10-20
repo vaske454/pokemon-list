@@ -1,4 +1,4 @@
-# Laravel + Next.js Pokemon Listing
+# Laravel + Next.js Pokemon List
 
 ## Get Started
 
