@@ -3,34 +3,19 @@
 ## Get Started
 
 1. Clone this repository on your computer
-2. Navigate to the project's root directory and initiate it by running
+2. Navigate to the project's root directory and run the following command to set up your development environment:
 ```
-ddev start
+ddev setup
 ```
-3. Install all required Composer dependencies: 
+This command will install all required Composer dependencies, generate a key for your application, execute Laravel migrations to create the database, and import Pokémon data.
+
+3. After setting up the Laravel project, navigate to the `nextjs-pokemon-list` folder and install its dependencies with yarn install or npm install. Then, copy the `.env.example` file to `.env.local`, and provide the URL of your backend. Replace `APP_URL` with the actual backend URL from your Laravel project's `.env` file:
 
 ```
-ddev composer install
-```
-4. Then, generate a key for your application by running this command:
-```
-ddev exec "php artisan key:generate"
-```
-5. Execute Laravel migrations to create the database:
-```
-ddev artisan migrate
-```
-6. Import Pokémon data:
-```
-ddev artisan app:import-pokemon-data
-```
-7. Next, navigate to the `nextjs-pokemon-list` folder, copy the `.env.example` file to `.env.local`, and supply the URL of your backend:
-
-```
-NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
+NEXT_PUBLIC_BACKEND_URL=APP_URL
 ```
 
-8. Run the application via `npm run dev`. The application will be available at `http://localhost:3000`:
+4. To start the application, run the following command inside the `nextjs-pokemon-list` directory. The application will be available at [http://localhost:3000](http://localhost:3000):
 
 ```
 npm run dev
@@ -38,7 +23,7 @@ npm run dev
 
 ## Usage
 
-Once you've set up the project, you can access the frontend (FE) in your web browser at [http://localhost:3000](http://localhost:3000). Similarly, you can access the backend (BE) at [http://localhost:8000](http://localhost:8000).
+Once you've set up the project, you can access the frontend (FE) in your web browser at [http://localhost:3000](http://localhost:3000).
 
 ## Authors
 
