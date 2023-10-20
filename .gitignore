@@ -1,0 +1,58 @@
+## Laravel
+/.phpunit.cache
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.vscode
+
+## Next.js
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/nextjs-pokemon-list/node_modules
+/nextjs-pokemon-list/.pnp
+/nextjs-pokemon-list.pnp.js
+
+# testing
+/nextjs-pokemon-list/coverage
+
+# next.js
+/nextjs-pokemon-list/.next/
+/nextjs-pokemon-list/out/
+
+# production
+/nextjs-pokemon-list/build
+
+# misc
+/nextjs-pokemon-list.DS_Store
+/nextjs-pokemon-list*.pem
+
+# debug
+/nextjs-pokemon-listnpm-debug.log*
+/nextjs-pokemon-listyarn-debug.log*
+/nextjs-pokemon-listyarn-error.log*
+
+# env files
+/nextjs-pokemon-list.env
+/nextjs-pokemon-list.env.local
+/nextjs-pokemon-list.env.development.local
+/nextjs-pokemon-list.env.test.local
+/nextjs-pokemon-list.env.production.local
+
+# vercel
+/nextjs-pokemon-list.vercel
+
