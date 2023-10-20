@@ -2,7 +2,7 @@
 
 ## Description: Setup the project
 ## Usage: setup
-## Example: ddev setup
+## Example: "ddev setup"
 
 # Step 1: Start DDEV
 echo "Step 1: Starting DDEV"
