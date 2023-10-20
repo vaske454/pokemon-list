@@ -4,6 +4,31 @@
 ## Usage: setup
 ## Example: "ddev setup"
 
+project_name=$(basename $PWD)
+
+if [ -f .env ]; then
+  sed -i 's|APP_URL=.*|APP_URL="http://api.'"$project_name"'"|' .env
+fi
+
+cat <<EOL > .ddev/config.yaml
+name: $project_name
+type: laravel
+docroot: public
+php_version: "8.1"
+webserver_type: nginx-fpm
+xdebug_enabled: false
+additional_hostnames:
+  - "api.$project_name"
+additional_fqdns: []
+database:
+  type: mariadb
+  version: "10.4"
+use_dns_when_possible: true
+composer_version: "2"
+web_environment: []
+nodejs_version: "18"
+EOL
+
 # Step 1: Start DDEV
 echo "Step 1: Starting DDEV"
 ddev start &&
