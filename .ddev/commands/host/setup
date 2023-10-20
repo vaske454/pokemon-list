@@ -38,7 +38,7 @@ echo "Step 3: Generating a key for your application"
 ddev exec "php artisan key:generate" &&
 
 if [ -f .env ]; then
-  grep -q 'APP_URL=.*' .env && sed -i 's|APP_URL=.*|APP_URL="http://api.'"$project_name"'"|' .env
+  sed -i 's|APP_URL=.*|APP_URL="http://api.'"$project_name"'"|' .env
 fi
 
 # Step 4: Execute Laravel migrations to create the database
