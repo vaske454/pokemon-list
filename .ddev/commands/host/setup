@@ -6,10 +6,6 @@
 
 project_name=$(basename $PWD)
 
-if [ -f .env ]; then
-  sed -i 's|APP_URL=.*|APP_URL="http://api.'"$project_name"'"|' .env
-fi
-
 cat <<EOL > .ddev/config.yaml
 name: $project_name
 type: laravel
@@ -40,6 +36,10 @@ ddev composer install &&
 # Step 3: Generate a key for your application
 echo "Step 3: Generating a key for your application"
 ddev exec "php artisan key:generate" &&
+
+if [ -f .env ]; then
+  grep -q 'APP_URL=.*' .env && sed -i 's|APP_URL=.*|APP_URL="http://api.'"$project_name"'"|' .env
+fi
 
 # Step 4: Execute Laravel migrations to create the database
 echo "Step 4: Executing Laravel migrations to create the database"
