@@ -1,11 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Laravel + Next.js Pokemon Listing
 
 ## Get Started
 
@@ -31,9 +24,22 @@ ddev artisan migrate
 ```
 ddev artisan app:import-pokemon-data
 ```
+7. Next, navigate to the `nextjs-pokemon-list` folder, copy the `.env.example` file to `.env.local`, and supply the URL of your backend:
+
+```
+NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
+```
+
+8. Run the application via `npm run dev`. The application will be available at `http://localhost:3000`:
+
+```
+npm run dev
+```
 
 ## Usage
-Once you've set up the project, you can access it in your web browser at [http://localhost:8000]
+
+Once you've set up the project, you can access the frontend (FE) in your web browser at [http://localhost:3000](http://localhost:3000). Similarly, you can access the backend (BE) at [http://localhost:8000](http://localhost:8000).
 
 ## Authors
+
 - Vasilije Tomović
