@@ -6,19 +6,19 @@
 
 # Step 1: Start DDEV
 echo "Step 1: Starting DDEV"
-ddev start
+ddev start &&
 
 # Step 2: Install all required Composer dependencies
 echo "Step 2: Installing all required Composer dependencies"
-ddev composer install
+ddev composer install &&
 
 # Step 3: Generate a key for your application
 echo "Step 3: Generating a key for your application"
-ddev exec "php artisan key:generate"
+ddev exec "php artisan key:generate" &&
 
 # Step 4: Execute Laravel migrations to create the database
 echo "Step 4: Executing Laravel migrations to create the database"
-ddev artisan migrate
+ddev artisan migrate &&
 
 # Step 5: Import Pokémon data
 echo "Step 5: Importing Pokémon data"
